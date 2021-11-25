@@ -1,0 +1,907 @@
+@font-face {
+    font-family: DroidSans-Bold;
+    src: url("../fonts/DroidSans-Bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: DroidSans;
+    src: url("../fonts/DroidSans.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Eagle-Book;
+    src: url("../fonts/Eagle-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Museo500-Regular;
+    src: url("../fonts/Museo500-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Museo700-Regular;
+    src: url("../fonts/Museo700-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Museo900-Regular;
+    src: url("../fonts/Museo900-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MuseoSans_1;
+    src: url("../fonts/MuseoSans_1.otf") format("opentype");
+}
+
+
+.navbar {
+    background-color: #fcd808;
+    height: 95px;
+}
+
+.logo {
+    width: 280px;
+}
+
+.slogan {
+    font-family: MuseoSans_1;
+    font-size: 17px;
+    color: #068298;
+    padding-top: 23px;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: MuseoSans_1;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.mega-title {
+    font-family: MuseoSans_1;
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.description {
+    font-family: Museo500-Regular;
+    font-size: 22px;
+}
+
+.bold {
+    font-family: Museo900-Regular;
+}
+
+/* .main-wrapper {
+    width: 900px;
+} */
+
+.ribbon-container {
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    display: block;
+    position: absolute;
+    font-family: Museo900-Regular;
+}
+
+.ticket-float {
+    position: relative;
+    left: 130px;
+    top: -38px;
+    z-index: 9999;
+}
+
+.text-float::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 55px;
+    position: absolute;
+    border-top: 35px solid transparent;
+    border-right: 20px solid rgb(255, 255, 255);
+    border-bottom: 35px solid transparent;
+    right: 0px;
+    top: -2px;
+}
+
+.text-float::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 55px;
+    position: absolute;
+    border-top: 35px solid transparent;
+    border-left: 20px solid rgb(255, 255, 255);
+    border-bottom: 35px solid transparent;
+    left: 0px;
+    top: -2px;
+}
+
+.ticket-container::before {
+    content: url(../img/ticket-2.svg);
+    display: block;
+    width: 200px;
+    height: 55px;
+    position: relative;
+    left: 100px;
+    bottom: -100px;
+}
+
+
+.img-float-container {
+    display: block;
+    /* position: absolute; */
+}
+
+.img-float {
+    margin-top: 14rem;
+}
+
+.blue-color {
+    color: #1B98FF;
+    font-weight: bold;
+}
+
+.red-color {
+    color: #FF4300;
+    font-weight: bold;
+}
+
+.yellow-color {
+    color: #FFE000;
+    font-weight: bold;
+}
+
+.green-color {
+    color: #008197;
+    font-weight: bold;
+}
+
+.gray-color {
+    color: #585757;
+}
+
+.white-color {
+    color: white;
+}
+
+.green-dark-color {
+    color: #008197;
+    font-weight: bold;
+}
+
+.bg-violet {
+    background-color: blueviolet;
+}
+
+.bg-green {
+    background: rgb(4, 169, 136);
+    background: linear-gradient(90deg, rgba(4, 169, 136, 1) 0%, rgba(14, 179, 164, 1) 0%, rgba(2, 203, 164, 1) 100%);
+}
+
+.bg-red {
+    background: rgb(4, 169, 136);
+    background: linear-gradient(90deg, rgba(4, 169, 136, 1) 0%, rgba(244, 66, 65, 1) 0%, rgba(244, 91, 16, 1) 100%);
+}
+
+.bg-blue {
+    background-color: #1B98FF;
+}
+
+.bg-yellow {
+    background-color: #FFE000;
+}
+
+.form-container {
+    margin-top: 5rem;
+}
+
+.form-control {
+    border-radius: 30px;
+    height: 60px;
+    border: 1px solid #FF4300;
+    width: 300px;
+    font-family: MuseoSans_1;
+}
+
+input::placeholder {
+    color: #ABABAB !important;
+    text-indent: 12px;
+    font-family: MuseoSans_1;
+    font-size: 20px;
+}
+
+button:disabled {
+    background-color: #cdcdcd !important;
+    border: none;
+}
+
+.btn-send {
+    border-radius: 25px;
+    height: 50px;
+    border: 1px solid #EC1F2F;
+    width: 300px;
+    background-color: #EC1F2F;
+    color: white;
+    font-family: MuseoSans_1;
+
+}
+
+.btn-send:hover {
+    border-radius: 25px;
+    height: 50px;
+    border: 1px solid #ac0d1a;
+    width: 300px;
+    background-color: #ac0d1a;
+    color: white;
+    font-family: MuseoSans_1;
+}
+
+.btn-close-modal {
+    border-radius: 25px;
+    height: 50px;
+    border: 1px solid #02cba4;
+    width: 150px;
+    background-color: #02cba4;
+    color: white;
+    font-family: MuseoSans_1;
+
+}
+
+.btn-close-modal:hover {
+    border-radius: 25px;
+    height: 50px;
+    border: 1px solid #05a081;
+    width: 150px;
+    background-color: #05a081;
+    color: white;
+    font-family: MuseoSans_1;
+}
+
+.close {
+    background-color: #ffffff !important;
+    border: none;
+}
+
+.mt-8 {
+    margin-top: 5.5rem;
+}
+
+.py-8 {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #fcd808;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.container-content {
+    height: auto;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-top: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.rounded-bg {
+    border-radius: 25px;
+    height: 50px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    color: white;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer {
+    background-color: #fcd808;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+/* table */
+
+.table>:not(caption)>*>* {
+    border-bottom-width: 0px !important;
+}
+
+table th {
+    color: #1B98FF;
+    padding: 10px;
+    text-align: center;
+    font-family: MuseoSans_1;
+    font-size: 20px;
+}
+
+table th:first-child {
+    border-radius: 30px 0 0 30px;
+}
+
+table th:last-child {
+    border-radius: 0 30px 30px 0;
+}
+
+tbody {
+    border-radius: 30px 0 0 30px !important;
+}
+
+.product {
+    font-family: Museo900-Regular;
+    font-size: 22px;
+    color: #1B98FF;
+    text-align: center;
+    vertical-align: middle;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-right: 2px solid #1B98FF;
+
+}
+
+.mision {
+    font-family: Museo500-Regular;
+    font-size: 16px;
+    color: #585757;
+    vertical-align: middle;
+    /* border-left: 2px solid #1B98FF; */
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+}
+
+.mision span {
+    font-family: Museo900-Regular;
+    font-size: 16px;
+    color: #1B98FF;
+    vertical-align: middle;
+}
+
+.mision a span {
+    font-family: Museo500-Regular;
+    font-size: 16px;
+    color: #2f9a5a;
+}
+
+.winner {
+    font-family: Museo900-Regular;
+    font-size: 40px;
+    color: #1B98FF;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 2px solid #1B98FF;
+
+}
+
+.prize {
+    font-family: Museo900-Regular;
+    font-size: 35px;
+    color: #1B98FF;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 2px solid #1B98FF;
+}
+
+tr td.prize-end-top:last-child {
+    border-top-right-radius: 20px !important;
+}
+
+tr td.prize-end-bottom:last-child {
+    border-bottom-right-radius: 20px !important;
+}
+
+td .bold {
+    font-family: Museo900-Regular;
+    font-size: 25px;
+    color: #1B98FF;
+}
+
+.table-margin {
+    margin-right: 3rem !important;
+    margin-left: 3rem !important;
+}
+
+.border-left {
+    border-left: 2px solid #1B98FF;
+}
+
+.border-right {
+    border-right: 2px solid #1B98FF;
+}
+
+.terms {
+    font-family: Museo500-Regular;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+    background: rgb(179, 177, 177);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+
+@media (min-width: 250px) and (max-width: 371.98px) {
+
+    .table-margin {
+        margin-right: .3rem !important;
+        margin-left: .3rem !important;
+    }
+
+    .container {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .table-responsive {
+        overflow-x: scroll !important;
+    }
+
+    .logo {
+        width: 215px;
+        height: auto;
+        padding-left: 5px;
+    }
+
+    .rounded-bg {
+        border-radius: calc(100px / 2);
+        height: 100px;
+    }
+
+    .container-content {
+        height: auto;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        margin-top: 2rem;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .mt-8 {
+        margin-top: 8rem !important;
+    }
+
+    .chat {
+        margin-top: 2rem;
+    }
+
+    .form-control {
+        width: 255px;
+    }
+
+    .btn {
+        width: 255px;
+    }
+
+    .table-responsive.mx-5 {
+        margin-left: .5rem !important;
+        margin-right: .5rem !important;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .ribbon-container {
+        width: 98%;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .text-float::after {
+        border-right: 20px solid transparent;
+    }
+
+    .text-float::before {
+        border-left: 20px solid transparent;
+    }
+
+    .ticket-container::before {
+        display: none;
+    }
+
+    .mt-8 {
+        margin-top: 6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .img-float {
+        margin-top: 0rem;
+    }
+
+    .img-float-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 0rem !important;
+    }
+
+    .description {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .slogan {
+        font-size: 12px;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+
+    .rounded-bg {
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+    }
+}
+
+@media (min-width: 372px) and (max-width: 575.98px) {
+    .table-margin {
+        margin-right: .3rem !important;
+        margin-left: .3rem !important;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .ribbon-container {
+        width: 98%;
+    }
+
+    .text-float::after {
+        border-right: 20px solid transparent;
+    }
+
+    .text-float::before {
+        border-left: 20px solid transparent;
+    }
+
+    .ticket-container::before {
+        display: none;
+    }
+
+    .mt-8 {
+        margin-top: 6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .img-float {
+        margin-top: 0rem;
+    }
+
+    .img-float-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 0rem !important;
+    }
+
+    .description {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .slogan {
+        font-size: 12px;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+
+    .rounded-bg {
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+        height: auto;
+        border-radius: 50vh;
+    }
+}
+
+.modal {
+    font-family: Museo500-Regular;
+    color: rgb(45, 44, 44);
+}
+
+
+/* // Extra small devices (portrait phones, less than 576px) */
+
+@media (min-width: 576px) and (max-width: 575.98px) {
+    .table-margin {
+        margin-right: .3rem !important;
+        margin-left: .3rem !important;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .ribbon-container {
+        width: 98%;
+    }
+
+    .text-float::after {
+        border-right: 20px solid transparent;
+    }
+
+    .text-float::before {
+        border-left: 20px solid transparent;
+    }
+
+    .ticket-container::before {
+        display: none;
+    }
+
+    .mt-8 {
+        margin-top: 6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .img-float {
+        margin-top: 0rem;
+    }
+
+    .img-float-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 0rem !important;
+    }
+
+    .description {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .slogan {
+        font-size: 12px;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+
+    .rounded-bg {
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+        height: auto;
+        border-radius: 50vh;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .table-margin {
+        margin-right: .3rem !important;
+        margin-left: .3rem !important;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .ribbon-container {
+        width: 90%;
+    }
+
+    .text-float::after {
+        border-right: 20px solid transparent;
+    }
+
+    .text-float::before {
+        border-left: 20px solid transparent;
+    }
+
+    .mt-8 {
+        margin-top: 5.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .ticket-container::before {
+        display: none;
+    }
+
+    .img-float {
+        margin-top: 0rem;
+    }
+
+    .img-float-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 0rem !important;
+    }
+
+    .description {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    .show-mobile {
+        display: none;
+    }
+
+    .logo {
+        width: 270px !important;
+    }
+
+    .rounded-bg {
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+        height: auto;
+        border-radius: 50vh;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .title {
+        font-size: 22px;
+    }
+
+    .ribbon-container {
+        width: 90%;
+    }
+
+    /* .mt-8 {
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+    } */
+    .ticket-container::before {
+        display: none;
+    }
+
+    .img-float {
+        margin-top: 0rem;
+    }
+
+    .img-float-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 0rem !important;
+    }
+
+    .description {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    .show-mobile {
+        display: none;
+    }
+
+    .rounded-bg {
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+        height: auto;
+        border-radius: 50vh;
+    }
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .title {
+        font-size: 25px;
+    }
+
+    .mt-8 {
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .ticket-container::before {
+        left: 50px;
+    }
+
+    .img-float {
+        margin-top: 0rem;
+    }
+
+    .img-float-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 0rem !important;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    .show-mobile {
+        display: none;
+    }
+
+    .logo {
+        width: 500px;
+    }
+
+    .double-scroll {
+        visibility: hidden !important;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .logo {
+        width: 500px !important;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    .show-mobile {
+        content-visibility: hidden;
+    }
+}

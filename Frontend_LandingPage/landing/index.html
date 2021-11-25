@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giros y Finanzas | El papá de los regalos</title>
+    <!-- FavIcon -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!--Js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-range/4.0.2/moment-range.js"
+        integrity="sha512-XKgbGNDruQ4Mgxt7026+YZFOqHY6RsLRrnUJ5SVcbWMibG46pPAC97TJBlgs83N/fqPTR0M89SWYOku6fQPgyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+        integrity="sha256-HtCCUh9Hkh//8U1OwcbD8epVEUdBvuI8wj1KtqMhNkI=" crossorigin="anonymous" />
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            console.log('GTM loaded');
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5MNVTQM');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="animated fadeIn">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MNVTQM" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <section>
+        <nav class="navbar">
+            <div class="container d-flex justify-content-between">
+                <div>
+                    <img src="./img/logo-vigilado.svg" width="7" height="auto" class="d-inline-block align-top"
+                        alt="logo-vigilado">
+                </div>
+                <div>
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo-slogan.svg" height="auto" class="img-fluid logo d-inline-block align-top"
+                            alt="logo-slogan">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container center-content">
+            <img class="img-fluid" src="./img/banner-1.png" alt="banner 1">
+        </div>
+    </section>
+
+    <div class="container w-100">
+        <h5 class="text-center title red-color">Regístrate y apúntate en la lista de santa.</h5>
+        <div class="center-content">
+            <div class="ribbon-container bg-blue">
+                <h5 class="text-float title text-center">¡Vamos a premiar a más de
+                    <span class="yellow-color">1.000 clientes</span>!
+                </h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3"></div>
+            <div class="col-xl-6">
+                <div class="center-content mt-3">
+                    <form class="form-container" id="leadForm">
+                        <div class="form-group my-2">
+                            <input type="text" class="form-control" id="nombre" name="nombre"
+                                aria-describedby="nameHelp" placeholder="Nombre*" oninput="validateInputs()">
+                            <small id="nameHelp" class="form-text text-danger">*Campo obligatorio.</small>
+                        </div>
+                        <div class="form-group my-2">
+                            <input type="number" class="form-control" id="documento" name="documento"
+                                aria-describedby="documentHelp" placeholder="Documento*">
+                            <small id="documentHelp" class="form-text text-danger">*Campo obligatorio.</small>
+                        </div>
+                        <div class="form-group my-2">
+                            <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                                placeholder="Email*">
+                            <small id="emailHelp" class="form-text text-danger">*Campo obligatorio.</small>
+                        </div>
+                        <button id="btn-send" type="submit" class="btn btn-send btn-primary mt-3">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="img-float-container mt-5">
+                    <img src="./img/ticket.svg" width="100" class="img-fluid img-float" alt="ticket">
+                </div>
+            </div>
+        </div>
+
+        <section id="week0"></section>
+        <section id="week4"></section>
+
+        <!-- Dynamyc Banners -->
+        <!-- Del 24 nov al 30 de nov  Expectativa visita 1/2 -->
+        <section id="banners">
+            <section class="d-none">
+                <div class="center-content">
+                    <img class="img-fluid hide-mobile" src="./img/expectativa-visita-1.png" alt="expectativa-visita-1">
+                </div>
+                <div class="row center-content">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                        <img class="img-fluid" src="./img/mobile-expectativa-visita-1.png" width="auto"
+                            alt="mobile-expectativa-visita-1">
+                    </div>
+                </div>
+            </section>
+            <section class="d-none">
+                <div class="center-content">
+                    <img class="img-fluid hide-mobile" src="./img/expectativa-visita-2.png" alt="expectativa-visita-2">
+                </div>
+                <div class="row center-content">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                        <img class="img-fluid" src="./img/mobile-expectativa-visita-2.png" width="auto"
+                            alt="mobile-expectativa-visita-2">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Del 1 al 10 Corte 1 visita 1/2 -->
+            <section class="d-none">
+                <div class="center-content">
+                    <img class="img-fluid hide-mobile" src="./img/corte-1-visita-1.png" alt="corte-1-visita-1">
+                </div>
+                <div class="row center-content">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                        <img class="img-fluid" src="./img/mobile-corte-1-visita-1.png" width="auto"
+                            alt="mobile-corte-1-visita-1">
+                    </div>
+                </div>
+            </section>
+            <section class="d-none">
+                <div class="center-content">
+                    <img class="img-fluid hide-mobile" src="./img/corte-1-visita-2.png" alt="corte-1-visita-2">
+                </div>
+                <div class="row center-content">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                        <img class="img-fluid" src="./img/mobile-corte-1-visita-2.png" width="auto"
+                            alt="mobile-corte-1-visita-2">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Del 11 al 20 Corte 2 visita 1/2 -->
+            <section class="d-none">
+                <div class="center-content">
+                    <img class="img-fluid hide-mobile" src="./img/corte-2-visita-1.png" alt="corte-2-visita-1">
+                </div>
+                <div class="row center-content">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                        <img class="img-fluid" src="./img/mobile-corte-2-visita-1.png" width="auto"
+                            alt="mobile-corte-2-visita-1">
+                    </div>
+                </div>
+            </section>
+            <section class="d-none">
+                <div class="center-content">
+                    <img class="img-fluid hide-mobile" src="./img/corte-2-visita-2.png" alt="corte-2-visita-2">
+                </div>
+                <div class="row center-content">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                        <img class="img-fluid" src="./img/mobile-corte-2-visita-2.png" width="auto"
+                            alt="mobile-corte-2-visita-2">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Del 21 al 31 Corte 3 visita 1/2 -->
+            <section class="d-none">
+                <div class="center-content">
+                    <img class="img-fluid hide-mobile" src="./img/corte-3-visita-1.png" alt="corte-3-visita-1">
+                </div>
+                <div class="row center-content">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                        <img class="img-fluid" src="./img/mobile-corte-3-visita-1.png" width="auto" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="d-none">
+                <div class="center-content">
+                    <img class="img-fluid hide-mobile" src="./img/corte-3-visita-2.png" alt="corte-3-visita-2">
+                </div>
+                <div class="row center-content">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                        <img class="img-fluid" src="./img/mobile-corte-3-visita-2.png" width="auto"
+                            alt="mobile-corte-3-visita-2">
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="d-none" id="closeWeeks">
+            <div class="center-content">
+                <img class="img-fluid hide-mobile" src="./img/cierre.png" alt="cierre">
+            </div>
+            <div class="row center-content">
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                    <img class="img-fluid" src="./img/mobile-cierre.png" width="auto" alt="mobile-cierre">
+                </div>
+            </div>
+        </section>
+
+        <!-- ./ dinamic Banners -->
+
+        <div class="mt-5">
+            <h5 class="text-center description gray-color">
+                Vamos a desbloquear premios semanales para que te los ganes usando tus <br />
+                productos de <span class="green-color bold">Giros y Finanzas</span>, lo único que debes hacer es
+                cumplir
+                las
+                metas <br />
+                de <span class="green-color bold">El Papa de los Regalos</span> y estar entre las primeras
+                posiciones al
+                hacerlo <br />
+            </h5>
+        </div>
+
+        <div class="center-content mt-4">
+            <div class="ribbon-container bg-green">
+                <h5 class="text-float title text-center">
+                    Conoce aquí los premios disponibles de esta semana:
+                </h5>
+            </div>
+        </div>
+
+        <div class="mt-8 ticket-container">
+            <h5 class="text-center description gray-color">
+                Recuerda que debes estar <span class="green-color bold">registrado en esta página</span> para poder
+                <br />
+                participar por los premios
+            </h5>
+        </div>
+    </div>
+
+    <!-- Content -->
+
+    <!-- Section 1 -->
+    <section id="week1">
+        <div class="container w-100">
+            <div class="bg-blue mt-5">
+                <div>
+                    <!-- <h1 class="text-center mega-title yellow-color pt-5">Semanas 1 y 2</h1> -->
+                    <h1 class="text-center mega-title yellow-color pt-5 pb-3">1 al 10 de diciembre del 2021</h1>
+                    <h5 class="text-center description white-color">
+                        Estas 2 semanas El Papá de los Regalos está tirando el trineo <br />
+                        por la ventana con más de 300 premios para nuestros clientes
+                    </h5>
+                    <div class="center-content mt-4">
+                        <img width="50" class="show-mobile" src="./img/scroll-icon-white.svg" alt="Scroll icon">
+                    </div>
+                    <div class="table-responsive table-margin mt-2" id="doublescroll1">
+                        <table class="table">
+                            <thead>
+                                <th>Productos</th>
+                                <th>Misiones</th>
+                                <th>Ganadores</th>
+                                <th>Premios</th>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td class="product" rowspan="2">Giros
+                                        Western Union</td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Cobra un Giro Internacional</span>
+                                            de mínimo $1.000.000 a través de
+                                            <a href="http://www.girosyfinanzas.com" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span>www.girosyfinanzas.com</span>
+                                            </a>, línea 01 8000
+                                            111999, en nuestra red de oficinas y corresponsales o en cualquiera
+                                            de
+                                            nuestros
+                                            canales de Giros.
+                                        </div>
+                                    </td>
+                                    <td class="winner">100</td>
+                                    <td class="prize prize-end-top">$120.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span> Envía un Giro Internacional</span>
+                                            de mínimo $1.200.000 a través de
+                                            <a href="http://www.girosyfinanzas.com" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span>www.girosyfinanzas.com</span>
+                                            </a>, línea 01
+                                            8000 111999, en nuestra red de oficinas y corresponsales o en
+                                            cualquiera de
+                                            nuestros canales de Giros.
+                                        </div>
+                                    </td>
+                                    <td class="winner">40</td>
+                                    <td class="prize prize-end-bottom">$100.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td class="product">Abono de Giros
+                                        Directo a Cuenta</td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Cobra un Giro Western Union</span>
+                                            de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
+                                            Finanzas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">20</td>
+                                    <td class="prize prize-end-top prize-end-bottom">$200.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td rowspan="3" class="product">Cuenta
+                                        de Ahorros </td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Solicita la Tarjeta Débito</span>
+                                            de tu Cuenta de Ahorros Giros y Finanzas y realiza dos compras de
+                                            mínimo
+                                            $20.000
+                                            cada una.
+                                        </div>
+                                    </td>
+                                    <td class="winner">100</td>
+                                    <td class="prize prize-end-top">$60.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span>Realiza 10 transacciones</span>
+                                            con tu
+                                            Cuenta de Ahorros (Consignaciones,
+                                            retiros con TD, Compras con TD, pagos
+                                            y transferencias).
+                                        </div>
+                                    </td>
+                                    <td class="winner">40</td>
+                                    <td class="prize prize-end-bottom">$50.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td rowspan="2" class="product init">Crédito </td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Realiza compras con tu Tarjeta de Crédito</span>
+                                            Giros y Finanzas por un valor mínimo de $500.000 y difiérelas a
+                                            partir de 6
+                                            cuotas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">50</td>
+                                    <td class="prize prize-end-top">$80.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span> Solicita un desembolso de tu cupo disponible en el Crédito
+                                                Rotativo</span>
+                                            por un valor mínimo de $1.500.000 y difiérelo a partir de 6
+                                            cuotas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">20</td>
+                                    <td class="prize prize-end-bottom">$100.000</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <p class="terms">
+                        <a href="img/terminos-y-condiciones.pdf" target="blank">
+                            <span class="text-white">*Aplican términos y condiciones</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="container-content bg-red">
+                <div>
+                    <!-- <h1 class="text-center mega-title yellow-color">Semana 3</h1> -->
+                    <h3 class="text-center mega-title white-color pb-3">11 al 20 de diciembre del 2021</h3>
+                    <div class="center-content">
+                        <div class="rounded-bg bg-yellow">
+                            <span class="bold description blue-color text-test">Próximamente desbloquearemos los
+                                premios
+                                disponibles para
+                                esta
+                                semana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-content bg-green">
+                <div>
+                    <!-- <h1 class="text-center mega-title yellow-color">Semanas 4 y 5</h1> -->
+                    <h3 class="text-center mega-title white-color pb-3">21 al 31 de diciembre del 2021</h3>
+                    <div class="center-content">
+                        <div class="rounded-bg bg-yellow">
+                            <span class="bold description blue-color">Próximamente desbloquearemos los premios
+                                disponibles
+                                para
+                                esta
+                                semana
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2 -->
+    <section id="week2">
+        <div class="container w-100">
+            <div class="bg-blue mt-5">
+                <div>
+                    <h3 class="text-center mega-title white-color py-8">1 al 10 de diciembre del 2021</h3>
+                </div>
+            </div>
+
+            <div class="container-content bg-red">
+                <div>
+                    <!-- <h1 class="text-center mega-title yellow-color">Semana 3</h1> -->
+                    <h1 class="text-center mega-title yellow-color pt-5 pb-3">11 al 20 de diciembre del 2021
+                    </h1>
+                    <h5 class="text-center description white-color">
+                        Estas 2 semanas El Papá de los Regalos está tirando el trineo <br />
+                        por la ventana con más de 300 premios para nuestros clientes
+                    </h5>
+                    <div class="center-content mt-4">
+                        <img width="50" class="show-mobile" src="./img/scroll-icon-white.svg" alt="Scroll icon">
+                    </div>
+                    <div class="table-responsive table-margin mt-2" id="doublescroll2">
+                        <table class="table">
+                            <thead>
+                                <th>Productos</th>
+                                <th>Misiones</th>
+                                <th>Ganadores</th>
+                                <th>Premios</th>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td class="product" rowspan="2">Giros
+                                        Western Union</td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Cobra un Giro Internacional</span>
+                                            de mínimo $1.000.000 a través de
+                                            <a href="http://www.girosyfinanzas.com" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span>www.girosyfinanzas.com</span>
+                                            </a>, línea 01 8000
+                                            111999, en nuestra red de oficinas y corresponsales o en cualquiera
+                                            de
+                                            nuestros
+                                            canales de Giros.
+                                        </div>
+                                    </td>
+                                    <td class="winner">100</td>
+                                    <td class="prize prize-end-top">$100.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span> Envía un Giro Internacional</span>
+                                            de mínimo $1.200.000 a través de
+                                            <a href="http://www.girosyfinanzas.com" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span>www.girosyfinanzas.com</span>
+                                            </a>, línea 01
+                                            8000 111999, en nuestra red de oficinas y corresponsales o en
+                                            cualquiera de
+                                            nuestros canales de Giros.
+                                        </div>
+                                    </td>
+                                    <td class="winner">60</td>
+                                    <td class="prize prize-end-bottom">$50.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td class="product">Abono de Giros
+                                        Directo a Cuenta</td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Cobra un Giro Western Union</span>
+                                            de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
+                                            Finanzas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">30</td>
+                                    <td class="prize prize-end-top prize-end-bottom">$150.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td rowspan="3" class="product">Cuenta
+                                        de Ahorros </td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Solicita la Tarjeta Débito</span>
+                                            de tu Cuenta de Ahorros Giros y Finanzas y realiza dos compras de
+                                            mínimo
+                                            $20.000
+                                            cada una.
+                                        </div>
+                                    </td>
+                                    <td class="winner">80</td>
+                                    <td class="prize prize-end-top">$75.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span>Realiza 10 transacciones</span>
+                                            con tu
+                                            Cuenta de Ahorros (Consignaciones,
+                                            retiros con TD, Compras con TD, pagos
+                                            y transferencias).
+                                        </div>
+                                    </td>
+                                    <td class="winner">80</td>
+                                    <td class="prize prize-end-bottom">$50.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td rowspan="2" class="product init">Crédito </td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Realiza compras con tu Tarjeta de Crédito</span>
+                                            Giros y Finanzas por un valor mínimo de $500.000 y difiérelas a
+                                            partir de 6
+                                            cuotas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">40</td>
+                                    <td class="prize prize-end-top">$50.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span> Solicita un desembolso de tu cupo disponible en el Crédito
+                                                Rotativo</span>
+                                            por un valor mínimo de $1.500.000 y difiérelo a partir de 6
+                                            cuotas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">50</td>
+                                    <td class="prize prize-end-bottom">$60.000</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <p class="terms">
+                        <a href="img/terminos-y-condiciones.pdf" target="blank">
+                            <span class="text-white">*Aplican términos y condiciones</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="container-content bg-green">
+                <div>
+                    <!-- <h1 class="text-center mega-title yellow-color">Semanas 4 y 5</h1> -->
+                    <h3 class="text-center mega-title white-color pb-3">21 al 31 de diciembre del 2021</h3>
+                    <div class="center-content">
+                        <div class="rounded-bg bg-yellow">
+                            <span class="bold description blue-color">Próximamente desbloquearemos los premios
+                                disponibles
+                                para
+                                esta
+                                semana
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 3 -->
+
+    <section id="week3">
+        <div class="container w-100">
+
+            <div class="bg-blue mt-5">
+                <div>
+                    <h3 class="text-center mega-title white-color py-8">1 al 10 de diciembre del 2021</h3>
+                </div>
+            </div>
+
+            <div class="container-content bg-red">
+                <div>
+                    <h3 class="text-center mega-title white-color py-8">11 al 20 de diciembre del 2021</h3>
+                </div>
+            </div>
+
+            <div class="container-content bg-green">
+                <div>
+                    <h1 class="text-center mega-title yellow-color pt-5 pb-3">21 al 31 de diciembre del 2021
+                    </h1>
+                    <h5 class="text-center description white-color">
+                        Estas 2 semanas El Papá de los Regalos está tirando el trineo <br />
+                        por la ventana con más de 300 premios para nuestros clientes
+                    </h5>
+                    <div class="center-content mt-4">
+                        <img width="50" class="show-mobile" src="./img/scroll-icon-white.svg" alt="Scroll icon">
+                    </div>
+                    <div class="table-responsive table-margin mt-2" id="doublescroll3">
+                        <table class="table">
+                            <thead>
+                                <th>Productos</th>
+                                <th>Misiones</th>
+                                <th>Ganadores</th>
+                                <th>Premios</th>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td class="product" rowspan="2">Giros
+                                        Western Union</td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Cobra un Giro Internacional</span>
+                                            de mínimo $1.000.000 a través de
+                                            <a href="http://www.girosyfinanzas.com" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span>www.girosyfinanzas.com</span>
+                                            </a>, línea 01 8000
+                                            111999, en nuestra red de oficinas y corresponsales o en cualquiera
+                                            de
+                                            nuestros
+                                            canales de Giros.
+                                        </div>
+                                    </td>
+                                    <td class="winner">50</td>
+                                    <td class="prize prize-end-top">$200.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span> Envía un Giro Internacional</span>
+                                            de mínimo $1.200.000 a través de
+                                            <a href="http://www.girosyfinanzas.com" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span>www.girosyfinanzas.com</span>
+                                            </a>, línea 01
+                                            8000 111999, en nuestra red de oficinas y corresponsales o en
+                                            cualquiera de
+                                            nuestros canales de Giros.
+                                        </div>
+                                    </td>
+                                    <td class="winner">50</td>
+                                    <td class="prize prize-end-bottom">$100.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td class="product">Abono de Giros
+                                        Directo a Cuenta</td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Cobra un Giro Western Union</span>
+                                            de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
+                                            Finanzas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">20</td>
+                                    <td class="prize prize-end-top prize-end-bottom">$200.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td rowspan="3" class="product">Cuenta
+                                        de Ahorros </td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Solicita la Tarjeta Débito</span>
+                                            de tu Cuenta de Ahorros Giros y Finanzas y realiza dos compras de
+                                            mínimo
+                                            $20.000
+                                            cada una.
+                                        </div>
+                                    </td>
+                                    <td class="winner">30</td>
+                                    <td class="prize prize-end-top">$100.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span>Realiza 10 transacciones</span>
+                                            con tu
+                                            Cuenta de Ahorros (Consignaciones,
+                                            retiros con TD, Compras con TD, pagos
+                                            y transferencias).
+                                        </div>
+                                    </td>
+                                    <td class="winner">80</td>
+                                    <td class="prize prize-end-bottom">$50.000</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td height="35px">&nbsp;</td>
+                                </tr>
+                            </tbody>
+
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td rowspan="2" class="product init">Crédito </td>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">1</span>
+                                        </div>
+                                        <div>
+                                            <span>Realiza compras con tu Tarjeta de Crédito</span>
+                                            Giros y Finanzas por un valor mínimo de $500.000 y difiérelas a
+                                            partir de 6
+                                            cuotas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">50</td>
+                                    <td class="prize prize-end-top">$80.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="mision">
+                                        <div class="mx-5 d-flex align-items-center">
+                                            <span class="bold">2</span>
+                                        </div>
+                                        <div>
+                                            <span> Solicita un desembolso de tu cupo disponible en el Crédito
+                                                Rotativo</span>
+                                            por un valor mínimo de $1.500.000 y difiérelo a partir de 6
+                                            cuotas.
+                                        </div>
+                                    </td>
+                                    <td class="winner">50</td>
+                                    <td class="prize prize-end-bottom">$100.000</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <p class="terms">
+                        <a href="img/terminos-y-condiciones.pdf" target="blank">
+                            <span class="text-white">*Aplican términos y condiciones</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <section>
+        <div class="container w-100">
+            <div class="center-content chat mb-5">
+                <a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F739464882772441%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink"
+                    target="_blank">
+                    <img class="img-fluid" src="./img/chat.png" width="auto" alt="chat">
+            </div>
+
+            <footer class="footer bg-yellow">
+                <div class="d-flex justify-content-between w-100 px-3">
+                    <div>
+                        <img src="./img/logo-vigilado.svg" width="5" height="auto" class="d-inline-block align-top"
+                            alt="">
+                    </div>
+                    <div>
+                        <a class="navbar-brand" href="#">
+                            <img src="./img/logo-slogan.svg" height="auto"
+                                class="img-fluid logo d-inline-block align-top" alt="">
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+
+            <!-- Modal Response -->
+            <div class="modal fade" id="modalResponse" tabindex="-1" role="dialog" aria-labelledby="emodalResponse"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalResponse">Registro Exitoso</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-center">
+                                <img class="img-fluid" src="./img/icon-check-green.svg" alt="ok">
+                            </div>
+                            <h3 class="text-center text-success my-4">
+                                Gracias por registrarse.
+                            </h3>
+                        </div>
+                        <div class="d-flex justify-content-center my-3">
+                            <button type="button" class="btn btn-close-modal btn-secondary"
+                                data-dismiss="modal">Entendido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Error -->
+            <div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="emodalResponse"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalError">Registro Fallido</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-center">
+                                <img class="img-fluid" src="./img/icon-denied.svg" alt="ok">
+                            </div>
+                            <h3 class="text-center text-danger my-4">
+                                No se pudo enviar el formulario<br />
+                                por favor intente más tarde.
+                            </h3>
+                        </div>
+                        <div class="d-flex justify-content-center my-3">
+                            <button type="button" class="btn btn-close-modal btn-secondary"
+                                data-dismiss="modal">Entendido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!--MODAL PARA INDICAR DUPLICIDAD EN DOCUMENTO-->
+            <div class="modal fade" id="modalErrorDoc" tabindex="-1" role="dialog" aria-labelledby="emodalResponse"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalError">Registro Fallido</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-center">
+                                <img class="img-fluid" src="./img/icon-denied.svg" alt="ok">
+                            </div>
+                            <h3 class="text-center text-danger my-4">
+                                El documento ya está registrado.
+                            </h3>
+                        </div>
+                        <div class="d-flex justify-content-center my-3">
+                            <button type="button" class="btn btn-close-modal btn-secondary"
+                                data-dismiss="modal">Entendido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!--MODAL PARA INDICAR DUPLICIDAD EN DOCUMENTO-->
+
+        </div>
+    </section>
+
+</body>
+
+</html>
