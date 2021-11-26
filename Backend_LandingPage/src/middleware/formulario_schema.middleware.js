@@ -1,6 +1,7 @@
 const formularioSchema = require('../json_schemas/formular.schema');
 
 const formularioMiddleware = async (req,res,next) => {
+    
     try {
         if(await formularioSchema.validateAsync(req.body)){
             next();

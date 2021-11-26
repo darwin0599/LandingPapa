@@ -1,4 +1,5 @@
 require('./config/config');
+const sequelize = require('./config/database');
 const express = require('express');
 const server = express();
 
@@ -16,7 +17,20 @@ server.use(express.json());
 server.use('/api',formularioRoute);
 server.use(error_handling);
 
-server.listen(process.env.PORT, ()=>{
-    logger.info(`Servidor iniciado en el puerto ${process.env.PORT}`);
-});
 
+(async ()=> {
+    try {
+        await sequelize.authenticate();
+        if(!module.parent){
+            server.listen(process.env.PORT, ()=>{
+                logger.info(`Servidor iniciado en el puerto ${process.env.PORT}`);
+            });
+        }
+    } catch (error) {
+        logger.info('Se presentó un error al intentar conectarse a la base de datos', error);
+    }
+})();
+
+
+
+module.exports = server;
