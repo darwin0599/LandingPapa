@@ -86,9 +86,20 @@
         </div>
     </section>
 
-    <div class="container w-100">
-        <h5 class="text-center title red-color">Regístrate y apúntate en la lista de santa.</h5>
+    <section class="d-none" id="closeWeeks">
         <div class="center-content">
+            <img class="img-fluid hide-mobile" src="./img/cierre.png" alt="cierre">
+        </div>
+        <div class="row center-content">
+            <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
+                <img class="img-fluid" src="./img/mobile-cierre.png" width="auto" alt="mobile-cierre">
+            </div>
+        </div>
+    </section>
+
+    <div class="container w-100">
+        <h5 class="text-center title red-color hideOnClose">Regístrate y apúntate en la lista de santa.</h5>
+        <div class="center-content hideOnClose">
             <div class="ribbon-container bg-blue">
                 <h5 class="text-float title text-center">¡Vamos a premiar a más de
                     <span class="yellow-color">1.000 clientes</span>!
@@ -101,7 +112,7 @@
                 <div class="center-content mt-3">
                     <form class="form-container" id="leadForm">
                         <div class="form-group my-2">
-                            <input type="text" class="form-control" id="nombre" name="nombre"
+                            <input type="nombre" class="form-control" id="nombre" name="nombre"
                                 aria-describedby="nameHelp" placeholder="Nombre*" oninput="validateInputs()">
                             <small id="nameHelp" class="form-text text-danger">*Campo obligatorio.</small>
                         </div>
@@ -227,20 +238,9 @@
             </section>
         </section>
 
-        <section class="d-none" id="closeWeeks">
-            <div class="center-content">
-                <img class="img-fluid hide-mobile" src="./img/cierre.png" alt="cierre">
-            </div>
-            <div class="row center-content">
-                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-2 show-mobile">
-                    <img class="img-fluid" src="./img/mobile-cierre.png" width="auto" alt="mobile-cierre">
-                </div>
-            </div>
-        </section>
-
         <!-- ./ dinamic Banners -->
 
-        <div class="mt-5">
+        <div class="mt-5 hideOnClose">
             <h5 class="text-center description gray-color">
                 Vamos a desbloquear premios semanales para que te los ganes usando tus <br />
                 productos de <span class="green-color bold">Giros y Finanzas</span>, lo único que debes hacer es
@@ -253,7 +253,7 @@
             </h5>
         </div>
 
-        <div class="center-content mt-4">
+        <div class="center-content mt-4 hideOnClose">
             <div class="ribbon-container bg-green">
                 <h5 class="text-float title text-center">
                     Conoce aquí los premios disponibles de esta semana:
@@ -261,7 +261,7 @@
             </div>
         </div>
 
-        <div class="mt-8 ticket-container">
+        <div class="mt-8 ticket-container hideOnClose">
             <h5 class="text-center description gray-color">
                 Recuerda que debes estar <span class="green-color bold">registrado en esta página</span> para poder
                 <br />
@@ -273,7 +273,7 @@
     <!-- Content -->
 
     <!-- Section 1 -->
-    <section id="week1">
+    <section id="week1" class="d-none">
         <div class="container w-100">
             <div class="bg-blue mt-5">
                 <div>
@@ -358,13 +358,15 @@
                                     <td class="product">Abono de Giros
                                         Directo a Cuenta</td>
                                     <td class="mision">
-                                        <div class="mx-5 d-flex align-items-center">
-                                            <span class="bold">1</span>
-                                        </div>
-                                        <div>
-                                            <span>Cobra un Giro Western Union</span>
-                                            de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
-                                            Finanzas.
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="mx-5 d-flex align-items-center">
+                                                <span class="bold">1</span>
+                                            </div>
+                                            <div>
+                                                <span>Cobra un Giro Western Union</span>
+                                                de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
+                                                Finanzas.
+                                            </div>
                                         </div>
                                     </td>
                                     <td class="winner">20</td>
@@ -503,7 +505,7 @@
 
 
     <!-- Section 2 -->
-    <section id="week2">
+    <section id="week2" class="d-none">
         <div class="container w-100">
             <div class="bg-blue mt-5">
                 <div>
@@ -595,13 +597,15 @@
                                     <td class="product">Abono de Giros
                                         Directo a Cuenta</td>
                                     <td class="mision">
-                                        <div class="mx-5 d-flex align-items-center">
-                                            <span class="bold">1</span>
-                                        </div>
-                                        <div>
-                                            <span>Cobra un Giro Western Union</span>
-                                            de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
-                                            Finanzas.
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="mx-5 d-flex align-items-center">
+                                                <span class="bold">1</span>
+                                            </div>
+                                            <div>
+                                                <span>Cobra un Giro Western Union</span>
+                                                de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
+                                                Finanzas.
+                                            </div>
                                         </div>
                                     </td>
                                     <td class="winner">30</td>
@@ -723,7 +727,7 @@
     </section>
     <!-- Section 3 -->
 
-    <section id="week3">
+    <section id="week3" class="d-none">
         <div class="container w-100">
 
             <div class="bg-blue mt-5">
@@ -821,13 +825,15 @@
                                     <td class="product">Abono de Giros
                                         Directo a Cuenta</td>
                                     <td class="mision">
-                                        <div class="mx-5 d-flex align-items-center">
-                                            <span class="bold">1</span>
-                                        </div>
-                                        <div>
-                                            <span>Cobra un Giro Western Union</span>
-                                            de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
-                                            Finanzas.
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="mx-5 d-flex align-items-center">
+                                                <span class="bold">1</span>
+                                            </div>
+                                            <div>
+                                                <span>Cobra un Giro Western Union</span>
+                                                de mínimo $1.000.000 pesos Directo en tu Cuenta de Ahorros Giros y
+                                                Finanzas.
+                                            </div>
                                         </div>
                                     </td>
                                     <td class="winner">20</td>

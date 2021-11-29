@@ -4,7 +4,6 @@ window.onload = () => {
     const tab1 = document.getElementById('doublescroll1');
     const tab2 = document.getElementById('doublescroll2');
     const tab3 = document.getElementById('doublescroll3');
-    
     window['moment-range'].extendMoment(moment);
 
     const validateRange = (min, max, value) => {
@@ -19,37 +18,30 @@ window.onload = () => {
     const weekInformation = [{
             week: 0,
             show: validateRange('2021-11-18', '2021-11-30', new Date()),
-            // show: validateRange('2021-11-18', '2021-11-30', '2021-11-23'),
+            // show: false,
             element: document.getElementById('week0'),
             banner: localStorage.getItem(`new-visitor-week-${0}`) ? false : true
         },
         {
             week: 1,
             show: validateRange('2021-12-01', '2021-12-10', new Date()),
-            // show: validateRange('2021-12-01', '2021-12-10', '2021-12-10'),
+            // show: false,
             element: document.getElementById('week1'),
             banner: localStorage.getItem(`new-visitor-week-${1}`) ? false : true
         },
         {
             week: 2,
             show: validateRange('2021-12-11', '2021-12-20', new Date()),
-            // show: validateRange('2021-12-11', '2021-12-20', '2021-12-20'),
+            // show: false,
             element: document.getElementById('week2'),
             banner: localStorage.getItem(`new-visitor-week-${2}`) ? false : true
         },
         {
             week: 3,
             show: validateRange('2021-12-21', '2021-12-31', new Date()),
-            // show: validateRange('2021-12-21', '2021-12-31', '2021-12-31'),
+            // show: false,
             element: document.getElementById('week3'),
             banner: localStorage.getItem(`new-visitor-week-${3}`) ? false : true
-        },
-        {
-            week: 3,
-            show: validateRange('2021-12-31', '2022-12-31', new Date()),
-            // show: validateRange('2021-12-21', '2021-12-31', '2021-12-31'),
-            element: document.getElementById('week3'),
-            banner: localStorage.getItem(`new-visitor-week-${4}`) ? false : true
         },
     ];
 
@@ -64,7 +56,7 @@ window.onload = () => {
     const showInformation = () => {
         weekInformation.forEach(item => {
             if (item.show || (item.week === 1 && weekInformation[0].show === true)) {
-                item.element.classList.remove('d-none');
+                item.element.classList.toggle('d-none');
                 item.element.classList.add('d-block');
                 // console.log('show', item);
                 setLocalStorage(`new-visitor-week-${item.week}`, item.show, item.week)
@@ -86,25 +78,67 @@ window.onload = () => {
         banners.push(bannersTempArr[i])
     }
 
-    for (let idx = 0; idx < weekInformation.length; idx++) {
-        if (weekInformation[idx].show && weekInformation[idx].banner) {
-            banners[idx].classList.remove('d-none');
-            banners[idx].classList.add('d-block');
-            // console.log('show banner', weekInformation[idx]);
-        } else if (weekInformation[idx].show && weekInformation[idx].banner === false) {
-            banners[idx + 1].classList.remove('d-none');
-            banners[idx + 1].classList.add('d-block');
-            // console.log('hide banner', weekInformation[idx]);
-        }
+    // weekInformation.forEach((week, idx) => {
+    //     for (let index = 0; index < banners.length; index++) {
+    //         console.log(index);
+    //         if (week.show && week.banner) {
+    //             banners[index].classList.toggle('d-none');
+    //         } else if (week.show && week.banner === false) {
+    //             if(index+1 !== 8){
+    //                 banners[index + 1].classList.toggle('d-none');
+    //             }
+    //         }
+    //     }
+    // });
+
+
+
+    if (weekInformation[0].show && weekInformation[0].banner) {
+        banners[0].classList.toggle('d-none');
+    } else if (weekInformation[0].show && weekInformation[0].banner === false) {
+        banners[1].classList.toggle('d-none');
+    }
+
+    if (weekInformation[1].show && weekInformation[1].banner) {
+        banners[2].classList.toggle('d-none');
+    } else if (weekInformation[1].show && weekInformation[1].banner === false) {
+        banners[3].classList.toggle('d-none');
+    }
+
+    if (weekInformation[2].show && weekInformation[2].banner) {
+        banners[4].classList.toggle('d-none');
+    } else if (weekInformation[2].show && weekInformation[2].banner === false) {
+        banners[5].classList.toggle('d-none');
+    }
+
+    if (weekInformation[3].show && weekInformation[3].banner) {
+        banners[6].classList.toggle('d-none');
+    } else if (weekInformation[3].show && weekInformation[3].banner === false) {
+        banners[7].classList.toggle('d-none');
     }
 
     // console.log('show complete', weekInformation);
+    // console.log('banners', banners);
+
+    let hideOnClose = document.getElementsByClassName('hideOnClose');
+    let hideOnCloseWeek = [];
+    for (var i = 0; i < hideOnClose.length; i++) {
+        hideOnCloseWeek.push(hideOnClose[i])
+    }
+
+    // console.log(hideOnClose);
 
     const closeWeeks = () => {
         let noWeekActive = weekInformation.filter(week => week.show === true);
         // let noWeekActive = [];
         if (noWeekActive && noWeekActive.length === 0) {
             document.getElementById('closeWeeks').classList.remove('d-none');
+            hideOnCloseWeek.forEach(item => {
+                item.classList.add('d-none');
+            })
+            document.getElementById('nombre').readOnly = true;
+            document.getElementById('documento').readOnly = true;
+            document.getElementById('email').readOnly = true;
             console.log('show banner close weeks');
         }
         // console.log('status', noWeekActive);
@@ -119,7 +153,9 @@ window.onload = () => {
         documento: '',
         email: ''
     }
+
     const inputs = document.querySelectorAll('input');
+    
     inputs.forEach((elem, idx) => {
         elem.oninput = (e) => {
             dataForm[e.target.name] = e.target.value;
@@ -140,14 +176,13 @@ window.onload = () => {
         let documentHelp = document.querySelector('#documentHelp');
         let emailHelp = document.querySelector('#emailHelp');
         let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        const documentoRgx = /[0-9]/;
+        const documentoRgx = /[0-9]+$/;
 
         const {
             nombre,
             documento,
             email
         } = dataForm;
-
         if (nombre && nombre.trim().length > 5) {
             isValidInput['nombre'] = true;
             nameHelp.style.display = 'none';
@@ -192,7 +227,8 @@ window.onload = () => {
 
         var url = 'http://localhost:3000/api';
         var data = dataForm;
-        
+
+
         fetch(url, {
                 method: 'POST',
                 body: JSON.stringify(data),
@@ -212,12 +248,12 @@ window.onload = () => {
             .catch(error => {
                 console.error('Error:', error)
                 showModalOnSend(false);
-        });
+            });
 
-        resetForm();
+            resetForm();
     }
 
-    const showModalOnSend = (status, httpCode) => {
+    const showModalOnSend = (status,httpCode) => {
         if(httpCode == 409 ){
             $('#modalErrorDoc').modal('show');
         }else if(status) {
@@ -273,4 +309,4 @@ window.onload = () => {
     doubleScroll(tab3);
 };
 
-console.log('versión => ', new Date(2021, 10, 25));
+console.log('versión 1 OK => ', new Date(2021, 10, 25));
