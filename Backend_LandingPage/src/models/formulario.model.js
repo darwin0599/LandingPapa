@@ -13,9 +13,11 @@ const formulario = sequelize.define(process.env.DB_TABLE_NAME,{
     }
 },
 {   freezeTableName: true,
-    timestamps: false,
-    createdAt: false,
-    updatedAt: false,
+    timestamps: true,
+    createdAt: true,
+    updatedAt: false
 })
+
+formulario.sync();
 
 module.exports = formulario;
